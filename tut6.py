@@ -1,0 +1,10 @@
+import cv2
+img = cv2.imread("thewizard.jpg")
+# convertig rgb to hsv(hue channel,saturation,value channel)
+img_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+cv2.imshow("img_hsv", img_hsv)
+cv2.imshow("img_hsv1", img_hsv[:, :, 0])
+cv2.imshow("img_hsv2", img_hsv[:, :, 1])
+cv2.imshow("img_hsv3", img_hsv[:, :, 2])
+cv2.waitKey(0)
+cv2.destroyAllWindows()
